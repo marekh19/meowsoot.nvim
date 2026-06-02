@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+
+- README palette is now copyable Markdown tables — one row per color with the
+  hex as selectable text — instead of a flattened SVG image where nothing was
+  selectable. Each color gets a small swatch under `static/swatches/`. Covers
+  both variants' accents and neutrals. Regenerated via `just extras`.
+
+### Removed
+
+- `static/palette.svg` and its generator (`palette_svg.lua`), replaced by the
+  Markdown-table generator (`palette_md.lua`).
+
 ## [0.1.1] — 2026-05-31
 
 ### Added

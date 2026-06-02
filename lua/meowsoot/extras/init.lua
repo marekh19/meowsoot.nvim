@@ -14,9 +14,10 @@ M.targets = {
   { name = "tmux", path = "extras/tmux/meowsoot.tmux" },
   { name = "fish", path = "extras/fish/meowsoot.fish" },
   { name = "fzf", path = "extras/fzf/meowsoot.conf" },
-  -- README palette swatch — emits an SVG covering both variants from a single
-  -- source of truth. Stays in sync with palette.lua via `just extras`.
-  { name = "palette_svg", path = "static/palette.svg" },
+  -- README palette tables + per-color swatches. Emits copyable Markdown (hex as
+  -- selectable text) covering both variants from a single source of truth.
+  -- Returns a list of writes instead of one file. Stays in sync via `just extras`.
+  { name = "palette_md" },
 }
 
 function M.setup()
@@ -32,8 +33,14 @@ function M.setup()
   for _, target in ipairs(M.targets) do
     local mod = require("meowsoot.extras." .. target.name)
     local content = mod.generate(colors)
-    Util.write(target.path, content)
-    io.write("[meowsoot] wrote " .. target.path .. "\n")
+    -- A generator returns either a single string (→ target.path) or a list of
+    -- { path, content } writes (multi-file generators like palette_md).
+    local writes = type(content) == "string" and { { path = target.path, content = content } }
+      or content
+    for _, w in ipairs(writes) do
+      Util.write(w.path, w.content)
+      io.write("[meowsoot] wrote " .. w.path .. "\n")
+    end
   end
 end
 

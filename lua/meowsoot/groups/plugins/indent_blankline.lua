@@ -7,12 +7,12 @@ function M.get(c)
   -- stylua: ignore
   return {
     -- v2 names (older)
-    IndentBlanklineChar        = { fg = c.fg_faint, nocombine = true },
+    IndentBlanklineChar        = { fg = c.indent, nocombine = true },
     IndentBlanklineContextChar = { fg = c.lavender, nocombine = true },
     -- v3 names
-    IblIndent  = { fg = c.fg_faint, nocombine = true },
+    IblIndent  = { fg = c.indent, nocombine = true },
     IblScope   = { fg = c.lavender, nocombine = true },
-    IblWhitespace = { fg = c.fg_faint, nocombine = true },
+    IblWhitespace = { fg = c.indent, nocombine = true },
   }
 end
 

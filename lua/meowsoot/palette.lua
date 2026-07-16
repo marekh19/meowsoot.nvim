@@ -35,6 +35,7 @@ local palettes = {
     fg       = {  20,  5, 88 },
     fg_mute  = {  30,  5, 68 }, -- comments
     fg_faint = {  33,  4, 50 }, -- gutter, punctuation, operators
+    indent   = {  33,  4, 27 }, -- passive indent guides (~1.9:1 on bg_0)
 
     -- Accents · ANCHOR (L=78)
     pink     = { 328, 62, 78 }, -- functions, methods, headings
@@ -79,6 +80,7 @@ local palettes = {
     fg       = {  25, 18, 20 }, -- dark warm charcoal
     fg_mute  = {  30, 12, 44 }, -- comments
     fg_faint = {  30,  8, 58 }, -- gutter, punctuation, operators
+    indent   = {  30,  8, 79 }, -- passive indent guides (~1.5:1 on bg_0)
 
     -- Accents · ANCHOR (L=32; darker = more prominent on light bg)
     pink     = { 328, 78, 32 }, -- functions, methods, headings

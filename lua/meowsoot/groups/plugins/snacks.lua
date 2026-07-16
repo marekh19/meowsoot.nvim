@@ -41,7 +41,7 @@ function M.get(c, opts)
     SnacksDashboardDir     = { fg = c.fg_faint },
 
     -- Indent
-    SnacksIndent      = { fg = c.fg_faint, nocombine = true },
+    SnacksIndent      = { fg = c.indent, nocombine = true },
     SnacksIndentScope = { fg = c.lavender, nocombine = true },
 
     -- Input

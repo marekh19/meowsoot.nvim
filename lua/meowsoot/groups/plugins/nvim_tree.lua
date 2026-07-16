@@ -19,7 +19,7 @@ function M.get(c, opts)
     NvimTreeSpecialFile  = { fg = c.lavender, underline = true },
     NvimTreeSymlink      = { fg = c.cyan, italic = true },
     NvimTreeExecFile     = { fg = c.peach },
-    NvimTreeIndentMarker = { fg = c.fg_faint },
+    NvimTreeIndentMarker = { fg = c.indent },
     NvimTreeOpenedFile   = { bg = c.bg_highlight },
     NvimTreeCursorLine   = { bg = c.bg_3 },
     NvimTreeGitNew       = { fg = c.git.add },

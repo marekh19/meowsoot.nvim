@@ -40,8 +40,10 @@ local NEUTRALS = {
   { key = "bg_2", role = "active line" },
   { key = "bg_3", role = "selection" },
   { key = "bg_4", role = "border" },
+  { key = "indent", role = "indent guides" },
   { key = "fg_faint", role = "gutter, punctuation, operators" },
-  { key = "fg_mute", role = "comments" },
+  { key = "comment", role = "comments" },
+  { key = "fg_mute", role = "docs, folds, diagnostics, statusline" },
   { key = "fg", role = "foreground" },
 }
 

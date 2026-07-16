@@ -12,7 +12,7 @@ function M.get(c, opts)
   return {
     -- Comments
     ["@comment"]                     = "Comment",
-    ["@comment.documentation"]       = { fg = c.fg_mute, italic = true },
+    ["@comment.documentation"]       = { fg = c.comment, italic = true },
     ["@comment.error"]               = { fg = c.error,   italic = true, bold = true },
     ["@comment.warning"]             = { fg = c.warning, italic = true, bold = true },
     ["@comment.hint"]                = { fg = c.hint,    italic = true, bold = true },
@@ -33,7 +33,7 @@ function M.get(c, opts)
 
     -- Strings (NEVER green)
     ["@string"]                      = "String",
-    ["@string.documentation"]        = { fg = c.fg_mute, italic = true },
+    ["@string.documentation"]        = { fg = c.comment, italic = true },
     ["@string.regexp"]               = { fg = c.yellow },
     ["@string.escape"]               = { fg = c.peach }, -- was green
     ["@string.special"]              = { fg = c.peach }, -- was green

@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+
+- Passive **indent guides** toned down via a dedicated `indent` palette token,
+  separate from `fg_faint` (so gutter/punctuation/operators keep their weight).
+  Contrast on the editor bg: night 4.61→1.90:1, dawn 2.77→1.52:1. (#4)
+- **Comments** toned down via a dedicated `comment` palette token, split from
+  `fg_mute` (so docs, folds, diagnostics, and statusline are unaffected).
+  Contrast: night 8.10→4.44:1, dawn 4.44→3.85:1. Doc comments follow the new
+  token. (#4)
+
 ## [0.1.2] — 2026-06-02
 
 ### Changed

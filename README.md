@@ -45,8 +45,10 @@ Both variants are resolved from the same HSL source of truth (`lua/meowsoot/pale
 | ![](static/swatches/night-bg_2.svg) | bg_2 | `#282625` | active line |
 | ![](static/swatches/night-bg_3.svg) | bg_3 | `#353331` | selection |
 | ![](static/swatches/night-bg_4.svg) | bg_4 | `#454240` | border |
+| ![](static/swatches/night-indent.svg) | indent | `#484542` | indent guides |
 | ![](static/swatches/night-fg_faint.svg) | fg_faint | `#85807a` | gutter, punctuation, operators |
-| ![](static/swatches/night-fg_mute.svg) | fg_mute | `#b1ada9` | comments |
+| ![](static/swatches/night-comment.svg) | comment | `#837d77` | comments |
+| ![](static/swatches/night-fg_mute.svg) | fg_mute | `#b1ada9` | docs, folds, diagnostics, statusline |
 | ![](static/swatches/night-fg.svg) | fg | `#e2e0df` | foreground |
 
 #### Dawn
@@ -72,8 +74,10 @@ Both variants are resolved from the same HSL source of truth (`lua/meowsoot/pale
 | ![](static/swatches/dawn-bg_2.svg) | bg_2 | `#f2eee9` | active line |
 | ![](static/swatches/dawn-bg_3.svg) | bg_3 | `#d7cac1` | selection |
 | ![](static/swatches/dawn-bg_4.svg) | bg_4 | `#b0998d` | border |
+| ![](static/swatches/dawn-indent.svg) | indent | `#cec9c5` | indent guides |
 | ![](static/swatches/dawn-fg_faint.svg) | fg_faint | `#9c948b` | gutter, punctuation, operators |
-| ![](static/swatches/dawn-fg_mute.svg) | fg_mute | `#7e7063` | comments |
+| ![](static/swatches/dawn-comment.svg) | comment | `#897a6c` | comments |
+| ![](static/swatches/dawn-fg_mute.svg) | fg_mute | `#7e7063` | docs, folds, diagnostics, statusline |
 | ![](static/swatches/dawn-fg.svg) | fg | `#3c312a` | foreground |
 
 <!-- palette:end -->

@@ -40,7 +40,7 @@ function M.setup(opts)
     fg_dark = p.fg_mute,
     fg_gutter = p.fg_faint,
     indent = p.indent,
-    comment = p.fg_mute,
+    comment = p.comment,
 
     -- Accents (direct pass-through — NOTE: no `green` key)
     pink = p.pink,

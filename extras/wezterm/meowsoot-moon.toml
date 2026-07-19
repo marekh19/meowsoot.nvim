@@ -1,0 +1,50 @@
+# meowsoot — WezTerm theme.
+# https://github.com/marekh19/meowsoot.nvim
+# Auto-generated from lua/meowsoot/palette.lua. Do not edit by hand.
+# Drop into ~/.config/wezterm/colors/ and set: config.color_scheme = 'meowsoot-moon'
+# See https://wezterm.org/config/appearance.html
+
+[colors]
+foreground = "#d9dbe8"
+background = "#171921"
+cursor_bg = "#eaa4c9"
+cursor_border = "#eaa4c9"
+cursor_fg = "#171921"
+selection_bg = "#353746"
+selection_fg = "#d9dbe8"
+split = "#404454"
+compose_cursor = "#e3b096"
+scrollbar_thumb = "#272935"
+
+ansi = ["#171921", "#e99696", "#98cdaa", "#dfd286", "#96bddf", "#eaa4c9", "#96d8e3", "#a0a5ba"]
+brights = ["#404454", "#f0b7b7", "#badec6", "#eee7c4", "#b5d0e8", "#eec4d9", "#c4e7ee", "#d9dbe8"]
+
+[colors.tab_bar]
+inactive_tab_edge = "#101218"
+background = "#101218"
+
+[colors.tab_bar.active_tab]
+fg_color = "#171921"
+bg_color = "#eaa4c9"
+
+[colors.tab_bar.inactive_tab]
+fg_color = "#a0a5ba"
+bg_color = "#272935"
+
+[colors.tab_bar.inactive_tab_hover]
+fg_color = "#eaa4c9"
+bg_color = "#272935"
+
+[colors.tab_bar.new_tab_hover]
+fg_color = "#eaa4c9"
+bg_color = "#171921"
+intensity = "Bold"
+
+[colors.tab_bar.new_tab]
+fg_color = "#eaa4c9"
+bg_color = "#171921"
+
+[metadata]
+aliases = []
+author = "meowsoot"
+name = "meowsoot-moon"

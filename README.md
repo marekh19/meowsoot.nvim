@@ -264,19 +264,21 @@ It reads the active variant (`vim.g.meowsoot_style`, falling back to `vim.o.back
 
 ## Extras (terminal / multiplexer / shell)
 
-Pre-generated configs live in `extras/`:
+Pre-generated configs live in `extras/`, one file per palette variant. **Night is the canonical default** — it keeps the unsuffixed filename; `moon` and `dawn` add a `-<variant>` suffix.
 
-| Tool      | File                              |
-|-----------|-----------------------------------|
-| Ghostty   | `extras/ghostty/meowsoot`         |
-| Kitty     | `extras/kitty/meowsoot.conf`      |
-| Alacritty | `extras/alacritty/meowsoot.toml`  |
-| WezTerm   | `extras/wezterm/meowsoot.toml`    |
-| Tmux      | `extras/tmux/meowsoot.tmux`       |
-| Fish      | `extras/fish/meowsoot.fish`       |
-| fzf       | `extras/fzf/meowsoot.conf`        |
+| Tool      | Night (default)                  | Moon                                  | Dawn                                  |
+|-----------|----------------------------------|---------------------------------------|---------------------------------------|
+| Ghostty   | `extras/ghostty/meowsoot`        | `extras/ghostty/meowsoot-moon`        | `extras/ghostty/meowsoot-dawn`        |
+| Kitty     | `extras/kitty/meowsoot.conf`     | `extras/kitty/meowsoot-moon.conf`     | `extras/kitty/meowsoot-dawn.conf`     |
+| Alacritty | `extras/alacritty/meowsoot.toml` | `extras/alacritty/meowsoot-moon.toml` | `extras/alacritty/meowsoot-dawn.toml` |
+| WezTerm   | `extras/wezterm/meowsoot.toml`   | `extras/wezterm/meowsoot-moon.toml`   | `extras/wezterm/meowsoot-dawn.toml`   |
+| Tmux      | `extras/tmux/meowsoot.tmux`      | `extras/tmux/meowsoot-moon.tmux`      | `extras/tmux/meowsoot-dawn.tmux`      |
+| Fish      | `extras/fish/meowsoot.fish`      | `extras/fish/meowsoot-moon.fish`      | `extras/fish/meowsoot-dawn.fish`      |
+| fzf       | `extras/fzf/meowsoot.conf`       | `extras/fzf/meowsoot-moon.conf`       | `extras/fzf/meowsoot-dawn.conf`       |
 
-These are output artifacts — don't edit by hand, they get overwritten on regeneration. They're pinned to the **night** palette so the terminal identity stays canonical even if you switch the editor to dawn.
+WezTerm loads schemes by internal name, so the variant files declare `meowsoot-moon` / `meowsoot-dawn` (matching the filename) — set `config.color_scheme` accordingly. Every other tool loads by file path.
+
+These are output artifacts — don't edit by hand, they get overwritten on regeneration.
 
 ### Regenerating
 

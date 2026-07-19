@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- Terminal/shell extras now cover **every palette variant**, not just night.
+  Each generator (ghostty, kitty, alacritty, wezterm, tmux, fish, fzf) runs once
+  per style; `moon` and `dawn` get a `-<variant>` filename suffix
+  (`meowsoot-moon.conf`, …). Night stays the canonical default and keeps its
+  unsuffixed filename. WezTerm's internal scheme name tracks the variant so the
+  three files don't collide. (#6)
+
 ## [0.3.0] — 2026-07-19
 
 ### Added

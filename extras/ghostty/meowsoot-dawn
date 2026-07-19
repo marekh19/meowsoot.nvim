@@ -1,0 +1,30 @@
+# meowsoot — Ghostty theme.
+# https://github.com/marekh19/meowsoot.nvim
+# Auto-generated from lua/meowsoot/palette.lua. Do not edit by hand.
+# See https://ghostty.org/docs/config/reference
+
+palette = 0=#f9f6f1
+palette = 1=#a11717
+palette = 2=#1f7a3d
+palette = 3=#917112
+palette = 4=#25659d
+palette = 5=#911256
+palette = 6=#187a8b
+palette = 7=#7e7063
+palette = 8=#b0998d
+palette = 9=#c41c1c
+palette = 10=#2aa252
+palette = 11=#866709
+palette = 12=#2d7abe
+palette = 13=#820d49
+palette = 14=#116374
+palette = 15=#3c312a
+
+background = #f9f6f1
+foreground = #3c312a
+
+cursor-color = #911256
+cursor-text  = #f9f6f1
+
+selection-background = #d7cac1
+selection-foreground = #3c312a

@@ -1,0 +1,40 @@
+# meowsoot — Alacritty theme.
+# https://github.com/marekh19/meowsoot.nvim
+# Auto-generated from lua/meowsoot/palette.lua. Do not edit by hand.
+# Import from your alacritty.toml:  [general] import = ["~/path/to/meowsoot.toml"]
+# See https://alacritty.org/config-alacritty.html
+
+# Default colors
+[colors.primary]
+background = '#171921'
+foreground = '#d9dbe8'
+
+[colors.cursor]
+cursor = '#eaa4c9'
+text = '#171921'
+
+[colors.selection]
+background = '#353746'
+text = '#d9dbe8'
+
+# Normal colors
+[colors.normal]
+black = '#171921'
+red = '#e99696'
+green = '#98cdaa'
+yellow = '#dfd286'
+blue = '#96bddf'
+magenta = '#eaa4c9'
+cyan = '#96d8e3'
+white = '#a0a5ba'
+
+# Bright colors
+[colors.bright]
+black = '#404454'
+red = '#f0b7b7'
+green = '#badec6'
+yellow = '#eee7c4'
+blue = '#b5d0e8'
+magenta = '#eec4d9'
+cyan = '#c4e7ee'
+white = '#d9dbe8'

@@ -6,7 +6,7 @@ local template = [[
 # meowsoot — WezTerm theme.
 # https://github.com/marekh19/meowsoot.nvim
 # Auto-generated from lua/meowsoot/palette.lua. Do not edit by hand.
-# Drop into ~/.config/wezterm/colors/ and set: config.color_scheme = 'meowsoot'
+# Drop into ~/.config/wezterm/colors/ and set: config.color_scheme = '${scheme_name}'
 # See https://wezterm.org/config/appearance.html
 
 [colors]
@@ -52,7 +52,7 @@ bg_color = "${bg_0}"
 [metadata]
 aliases = []
 author = "meowsoot"
-name = "meowsoot"
+name = "${scheme_name}"
 ]]
 
 function M.generate(colors)

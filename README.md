@@ -16,9 +16,42 @@ Pure Lua. Zero runtime dependencies. Authored in HSL, AAA contrast on the night 
 - **22 plugin integrations, auto-detected via `lazy.nvim`.** Telescope, fzf-lua, Snacks, Gitsigns, nvim-cmp, blink.cmp, mini.*, noice, which-key, trouble, render-markdown, treesitter-context, flash, lazy.nvim, nvim-tree, indent-blankline. Bundled lualine theme.
 - **Ecosystem in the box.** Matching configs for Ghostty, Kitty, Alacritty, WezTerm, Tmux, Fish, and fzf live in `extras/`, regenerated from the same palette. Your editor identity carries through to your shell.
 
+## Showcase
+
+**The full editor surface.** File tree, split buffers, lualine — all keyed to the same six-hue chromatic system.
+
+![editor surface](static/showcase-files.png)
+
+**Markdown via `render-markdown.nvim`.** The rainbow heading wash, fenced code blocks, badges, inline links — all in palette.
+
+![markdown rendering](static/showcase-markdown.png)
+
+**Pickers.** Fuzzy file search floating over a code buffer.
+
+![picker over code](static/showcase-picker.png)
+
+**Git surface.** Log view with an inline commit diff. The only place green is allowed to appear — for `add` lines and nothing else.
+
+![git log and inline diff](static/showcase-git.png)
+
+**Moon — cool dark variant.** The same buffer as the hero up top, neutrals rotated to a calm blue.
+
+![moon variant](static/showcase-moon.png)
+
+**Dawn — light variant.** The same buffer on warm cream — same hue identity, tier-inverted for readability.
+
+![dawn variant](static/showcase-dawn.png)
+
+**Terminal ecosystem.** Ghostty, Kitty, Alacritty, WezTerm, Tmux, and Fish all themed via the `extras/` configs, regenerated from the same palette.
+
+![ghostty, tmux, fish](static/showcase-ghostty-fish-tmux.png)
+
 ## Palette
 
 All three variants are resolved from the same HSL source of truth (`lua/meowsoot/palette.lua`). The tables below are regenerated whenever the palette changes — run `just extras` to refresh. Hex values are real text, so you can select and copy them.
+
+<details>
+<summary><strong>Full swatch tables</strong> — Night · Moon · Dawn (click to expand)</summary>
 
 <!-- palette:start -->
 
@@ -111,33 +144,9 @@ All three variants are resolved from the same HSL source of truth (`lua/meowsoot
 
 <!-- palette:end -->
 
+</details>
+
 The night variant is the main act. **moon** is a cool, blue-tinted dark counterpart — same accents, neutrals rotated to a calm blue (H≈230°) for a Rosé-Pine-Moon mood. **dawn** is a complementary light counterpart with the same hue identity, tier-inverted for readability on cream.
-
-## Showcase
-
-**The full editor surface.** File tree, split buffers, lualine — all keyed to the same six-hue chromatic system.
-
-![editor surface](static/showcase-files.png)
-
-**Markdown via `render-markdown.nvim`.** The rainbow heading wash, fenced code blocks, badges, inline links — all in palette.
-
-![markdown rendering](static/showcase-markdown.png)
-
-**Pickers.** Fuzzy file search floating over a code buffer.
-
-![picker over code](static/showcase-picker.png)
-
-**Git surface.** Log view with an inline commit diff. The only place green is allowed to appear — for `add` lines and nothing else.
-
-![git log and inline diff](static/showcase-git.png)
-
-**Dawn variant.** The same scene in light mode — same hue identity, tier-inverted for readability on warm cream.
-
-![dawn variant](static/showcase-dawn.png)
-
-**Terminal ecosystem.** Ghostty, Kitty, Alacritty, WezTerm, Tmux, and Fish all themed via the `extras/` configs, regenerated from the same palette.
-
-![ghostty, tmux, fish](static/showcase-ghostty-fish-tmux.png)
 
 ## The story
 

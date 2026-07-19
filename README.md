@@ -18,7 +18,7 @@ Pure Lua. Zero runtime dependencies. Authored in HSL, AAA contrast on the night 
 
 ## Palette
 
-Both variants are resolved from the same HSL source of truth (`lua/meowsoot/palette.lua`). The tables below are regenerated whenever the palette changes — run `just extras` to refresh. Hex values are real text, so you can select and copy them.
+All three variants are resolved from the same HSL source of truth (`lua/meowsoot/palette.lua`). The tables below are regenerated whenever the palette changes — run `just extras` to refresh. Hex values are real text, so you can select and copy them.
 
 <!-- palette:start -->
 
@@ -51,6 +51,35 @@ Both variants are resolved from the same HSL source of truth (`lua/meowsoot/pale
 | ![](static/swatches/night-fg_mute.svg) | fg_mute | `#b1ada9` | docs, folds, diagnostics, statusline |
 | ![](static/swatches/night-fg.svg) | fg | `#e2e0df` | foreground |
 
+#### Moon
+
+**Accents**
+
+| Swatch | Name | Hex | Role |
+|---|---|---|---|
+| ![](static/swatches/moon-pink.svg) | pink | `#eaa4c9` | functions, methods, headings |
+| ![](static/swatches/moon-lavender.svg) | lavender | `#cca6e7` | types, classes, modules |
+| ![](static/swatches/moon-cyan.svg) | cyan | `#96d8e3` | keywords, imports, tags, builtins |
+| ![](static/swatches/moon-peach.svg) | peach | `#e3b096` | constants, booleans |
+| ![](static/swatches/moon-blue.svg) | blue | `#96bddf` | ANSI 4/12, diff-change, info |
+| ![](static/swatches/moon-yellow.svg) | yellow | `#dfd286` | strings, regex |
+
+**Neutrals**
+
+| Swatch | Name | Hex | Role |
+|---|---|---|---|
+| ![](static/swatches/moon-bg_deep.svg) | bg_deep | `#101218` | darkest panel |
+| ![](static/swatches/moon-bg_0.svg) | bg_0 | `#171921` | editor background |
+| ![](static/swatches/moon-bg_1.svg) | bg_1 | `#20222c` | panel |
+| ![](static/swatches/moon-bg_2.svg) | bg_2 | `#272935` | active line |
+| ![](static/swatches/moon-bg_3.svg) | bg_3 | `#353746` | selection |
+| ![](static/swatches/moon-bg_4.svg) | bg_4 | `#404454` | border |
+| ![](static/swatches/moon-indent.svg) | indent | `#434656` | indent guides |
+| ![](static/swatches/moon-fg_faint.svg) | fg_faint | `#797e96` | gutter, punctuation, operators |
+| ![](static/swatches/moon-comment.svg) | comment | `#797e9a` | comments |
+| ![](static/swatches/moon-fg_mute.svg) | fg_mute | `#a0a5ba` | docs, folds, diagnostics, statusline |
+| ![](static/swatches/moon-fg.svg) | fg | `#d9dbe8` | foreground |
+
 #### Dawn
 
 **Accents**
@@ -82,7 +111,7 @@ Both variants are resolved from the same HSL source of truth (`lua/meowsoot/pale
 
 <!-- palette:end -->
 
-The night variant is the main act; **dawn** is a complementary light counterpart with the same hue identity, tier-inverted for readability on cream.
+The night variant is the main act. **moon** is a cool, blue-tinted dark counterpart — same accents, neutrals rotated to a calm blue (H≈230°) for a Rosé-Pine-Moon mood. **dawn** is a complementary light counterpart with the same hue identity, tier-inverted for readability on cream.
 
 ## Showcase
 
@@ -152,7 +181,7 @@ All options are optional. Defaults shown.
 
 ```lua
 require("meowsoot").setup({
-  style = "night",                -- "night" (dark) | "dawn" (light)
+  style = "night",                -- "night" (warm dark) | "moon" (cool dark) | "dawn" (light)
   transparent = false,            -- transparent backgrounds
   terminal_colors = true,         -- set vim.g.terminal_color_0..15
 
@@ -187,15 +216,16 @@ vim.cmd.colorscheme("meowsoot")
 Two ways to pick a variant:
 
 ```lua
-require("meowsoot").setup({ style = "dawn" })
+require("meowsoot").setup({ style = "moon" })
 vim.cmd.colorscheme("meowsoot")
 ```
 
 Or skip `setup` entirely and use the per-variant entry point:
 
 ```vim
-:colorscheme meowsoot          " night
-:colorscheme meowsoot-dawn     " dawn
+:colorscheme meowsoot          " night (warm dark, default)
+:colorscheme meowsoot-moon     " moon (cool dark)
+:colorscheme meowsoot-dawn     " dawn (warm light)
 ```
 
 To flip variants with `:set background=light` / `dark`, wire an autocmd:
@@ -217,7 +247,7 @@ Use the bundled lualine theme:
 require("lualine").setup({ options = { theme = "meowsoot" } })
 ```
 
-It reads the active variant from `vim.o.background` and re-resolves on every `:colorscheme` switch, so it stays in sync.
+It reads the active variant (`vim.g.meowsoot_style`, falling back to `vim.o.background`) and re-resolves on every `:colorscheme` switch, so it stays in sync.
 
 ### Plugins covered out of the box
 
@@ -278,7 +308,7 @@ lua/meowsoot/
   theme.lua           -- orchestrator: colors → groups → nvim_set_hl
   util.lua            -- blend / darken / lighten / template / cache
   hsl.lua             -- HSL ↔ hex (~50 lines, no dependencies)
-  palette.lua         -- HSL palette (single source of truth, both variants)
+  palette.lua         -- HSL palette (single source of truth, all variants)
   colors.lua          -- HSL → hex + semantic alias layer ("no green in code" chokepoint)
   groups/
     init.lua          -- aggregator: cache, plugin auto-detect via lazy

@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- New **moon** variant — a cool, blue-tinted dark counterpart to `night` (#2).
+  Neutrals rotate to H≈230° at calm Rosé-Pine saturation on night's exact
+  lightness ladder; accents are reused verbatim, so the six-hue identity and
+  every AAA contrast carry over. Warm `night` stays default. Use via
+  `style = "moon"` or `:colorscheme meowsoot-moon`.
+
 ## [0.2.0] — 2026-07-17
 
 ### Changed

@@ -19,6 +19,9 @@ function M.setup(opts)
   vim.o.termguicolors = true
   vim.o.background = opts.style == "dawn" and "light" or "dark"
   vim.g.colors_name = "meowsoot"
+  -- Expose the active variant so palette-driven consumers (e.g. the lualine
+  -- theme) can disambiguate the two dark variants, which share `background`.
+  vim.g.meowsoot_style = opts.style
 
   for group, hl in pairs(groups) do
     if type(hl) == "string" then

@@ -78,6 +78,7 @@ function M.generate(_)
 
   for _, v in ipairs({
     { label = "Night", style = "night" },
+    { label = "Moon", style = "moon" },
     { label = "Dawn", style = "dawn" },
   }) do
     local colors = Palette.resolve(v.style)

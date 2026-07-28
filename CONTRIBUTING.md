@@ -122,9 +122,9 @@ After any palette change, regenerate the downstream artifacts:
 just extras
 ```
 
-This rewrites `extras/ghostty/meowsoot`, `extras/tmux/meowsoot.tmux`,
+This rewrites the files under `extras` (e.g. `extras/ghostty/meowsoot`, `extras/tmux/meowsoot.tmux`,
 `extras/fish/meowsoot.fish`, `extras/fzf/meowsoot.conf`, and
-`static/palette.svg` from the live palette. Commit those alongside the palette
+`static/palette.svg`) from the live palette. Commit those alongside the palette
 edit so a downstream consumer pulling main never sees a partial update.
 
 ## PR expectations

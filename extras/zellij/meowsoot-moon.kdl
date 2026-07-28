@@ -1,0 +1,123 @@
+# meowsoot — Zellij theme.
+# https://github.com/marekh19/meowsoot.nvim
+# Auto-generated from lua/meowsoot/palette.lua. Do not edit by hand.
+# Install: cp extras/zellij/meowsoot.kdl ~/.config/zellij/themes/
+# Load: Edit ~/.config/zellij/config.kdl to have "theme = meowsoot"
+# Note: You may have to create the themes directory mkdir -p ~/.config/zellij/themes/
+
+themes {
+    meowsoot {
+        ribbon_unselected {
+            base 150 216 227
+            background 032 034 044
+            emphasis_0 234 164 201
+            emphasis_1 223 210 134
+            emphasis_2 227 176 150
+            emphasis_3 160 165 186
+            }
+        ribbon_selected {
+            base 234 164 201
+            background 032 034 044
+            emphasis_0 234 164 201
+            emphasis_1 223 210 134
+            emphasis_2 227 176 150
+            emphasis_3 160 165 186
+        }
+        text_unselected {
+            base 150 216 227
+            background 032 034 044
+            emphasis_0 234 164 201
+            emphasis_1 223 210 134
+            emphasis_2 227 176 150
+            emphasis_3 160 165 186
+            }
+        text_selected {
+            base 234 164 201
+            background 032 034 044
+            emphasis_0 234 164 201
+            emphasis_1 223 210 134
+            emphasis_2 227 176 150
+            emphasis_3 160 165 186
+        }
+        table_title {
+            base 150 216 227
+            background 032 034 044
+            emphasis_0 234 164 201
+            emphasis_1 223 210 134
+            emphasis_2 227 176 150
+            emphasis_3 160 165 186
+        }
+        table_cell_unselected {
+            base 150 216 227
+            background 032 034 044
+            emphasis_0 234 164 201
+            emphasis_1 223 210 134
+            emphasis_2 227 176 150
+            emphasis_3 160 165 186
+        }
+        table_cell_selected {
+            base 234 164 201
+            background 032 034 044
+            emphasis_0 150 216 227
+            emphasis_1 223 210 134
+            emphasis_2 227 176 150
+            emphasis_3 160 165 186
+        }
+        list_unselected {
+            base 150 216 227
+            background 032 034 044
+            emphasis_0 234 164 201
+            emphasis_1 223 210 134
+            emphasis_2 227 176 150
+            emphasis_3 160 165 186
+        }
+        list_selected {
+            base 234 164 201
+            background 032 034 044
+            emphasis_0 150 216 227
+            emphasis_1 223 210 134
+            emphasis_2 227 176 150
+            emphasis_3 160 165 186
+        }
+        frame_unselected {
+            base 150 216 227
+            background 032 034 044
+            emphasis_0 234 164 201
+            emphasis_1 223 210 134
+            emphasis_2 227 176 150
+            emphasis_3 160 165 186
+        }
+        frame_selected {
+            base 234 164 201
+            background 032 034 044
+            emphasis_0 234 164 201
+            emphasis_1 223 210 134
+            emphasis_2 227 176 150
+            emphasis_3 160 165 186
+        }
+        frame_highlight {
+            base 223 210 134
+            background 032 034 044
+            emphasis_0 234 164 201
+            emphasis_1 223 210 134
+            emphasis_2 227 176 150
+            emphasis_3 160 165 186
+        }
+        exit_code_success {
+            base 150 216 227
+            background 032 034 044
+            emphasis_0 234 164 201
+            emphasis_1 223 210 134
+            emphasis_2 227 176 150
+            emphasis_3 160 165 186
+        }
+        exit_code_error {
+            base 234 164 201
+            background 032 034 044
+            emphasis_0 234 164 201
+            emphasis_1 223 210 134
+            emphasis_2 227 176 150
+            emphasis_3 160 165 186
+        }
+    }
+}

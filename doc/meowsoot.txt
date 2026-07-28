@@ -159,10 +159,15 @@ Pre-generated configs for adjacent tooling ship in the repo under `extras/`:
 
     Tool      File
     -------   ----------------------------------
-    Ghostty   extras/ghostty/meowsoot
-    Tmux      extras/tmux/meowsoot.tmux
+    Alacritty extras/alacritty/meowsoot.toml
     Fish      extras/fish/meowsoot.fish
     fzf       extras/fzf/meowsoot.conf
+    Ghostty   extras/ghostty/meowsoot
+    Kitty     extras/kitty/meowsoot.conf
+    Tmux      extras/tmux/meowsoot.tmux
+    WezTerm   extras/wezterm/meowsoot.toml
+    Zellij    extras/zellij/meowsoot.kdl
+
 
 They are pinned to the **night** palette so the terminal identity stays
 canonical even if you switch the editor to dawn. Refer to each tool's own

@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- Terminal extras for Zellij (`extras/zellij/meowsoot.kdl`) regenerated from the same palette via
+  `just extras`.
+
 ## [0.4.0] — 2026-07-19
 
 ### Added

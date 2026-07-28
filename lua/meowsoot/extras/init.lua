@@ -19,6 +19,7 @@ M.targets = {
   { name = "tmux", path = "extras/tmux/meowsoot.tmux" },
   { name = "fish", path = "extras/fish/meowsoot.fish" },
   { name = "fzf", path = "extras/fzf/meowsoot.conf" },
+  { name = "zellij", path = "extras/zellij/meowsoot.kdl" },
 }
 
 -- Night stays the canonical default (unsuffixed); moon/dawn get a suffix.

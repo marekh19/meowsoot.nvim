@@ -1,0 +1,32 @@
+# meowsoot - delta theme.
+# https://github.com/marekh19/meowsoot.nvim
+# Auto-generated from lua/meowsoot/palette.lua. Do not edit by hand.
+# Requires extras/bat/meowsoot.tmTheme in bat's theme directory and:
+#   bat cache --build
+# Include from ~/.gitconfig:  [include] path = /path/to/meowsoot.gitconfig
+
+[delta]
+  syntax-theme                  = meowsoot
+  dark = true
+  zero-style                    = syntax
+  minus-style                   = syntax "#3d2d2d"
+  minus-non-emph-style          = syntax "#3d2d2d"
+  minus-emph-style              = bold syntax "#614343"
+  minus-empty-line-marker-style = syntax "#3d2d2d"
+  plus-style                    = syntax "#2e3731"
+  plus-non-emph-style           = syntax "#2e3731"
+  plus-emph-style               = bold syntax "#44564a"
+  plus-empty-line-marker-style  = syntax "#2e3731"
+  line-numbers-left-style       = "#85807a"
+  line-numbers-minus-style      = "#e99696"
+  line-numbers-plus-style       = "#98cdaa"
+  line-numbers-right-style      = "#85807a"
+  line-numbers-zero-style       = "#85807a"
+  file-style                    = "#e2e0df"
+  file-decoration-style         = "#454240" ul
+  hunk-header-style             = file line-number syntax
+  hunk-header-decoration-style  = "#454240" box ul
+  hunk-header-file-style        = bold "#e2e0df"
+  hunk-header-line-number-style = "#b1ada9"
+  commit-decoration-style       = "#966b81" box ul
+  blame-palette                 = "#100f0f" "#201f1d" "#282625" "#353331"

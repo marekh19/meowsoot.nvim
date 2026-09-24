@@ -14,7 +14,7 @@ Pure Lua. Zero runtime dependencies. Authored in HSL, AAA contrast on the night 
 - **Six chromatic accents, tuned together.** Anchored at 190° · 208° · 275° · 328° · 20° · 50° — cyan, blue, lavender, pink, peach, yellow. Warm-biased. Three lightness tiers per accent (ANCHOR / STANDARD / QUIET) so the visual hierarchy of the syntax tree comes through without arbitrary highlight noise.
 - **Pure Lua, zero dependencies.** ~50-line HSL → hex engine. No plenary, no required treesitter, no `lush.nvim`. Loads fast, caches compiled highlights, easy to fork.
 - **22 plugin integrations, auto-detected via `lazy.nvim`.** Telescope, fzf-lua, Snacks, Gitsigns, nvim-cmp, blink.cmp, mini.*, noice, which-key, trouble, render-markdown, treesitter-context, flash, lazy.nvim, nvim-tree, indent-blankline. Bundled lualine theme.
-- **Ecosystem in the box.** Matching configs for Ghostty, Kitty, Alacritty, WezTerm, Tmux, Fish, and fzf live in `extras/`, regenerated from the same palette. Your editor identity carries through to your shell.
+- **Ecosystem in the box.** Matching configs for Ghostty, Kitty, Alacritty, WezTerm, Tmux, Fish, fzf, Bat, and Delta live in `extras/`, regenerated from the same palette. Your editor identity carries through to your shell and command-line tools.
 
 ## Showcase
 
@@ -42,7 +42,7 @@ Pure Lua. Zero runtime dependencies. Authored in HSL, AAA contrast on the night 
 
 ![dawn variant](static/showcase-dawn.png)
 
-**Terminal ecosystem.** Ghostty, Kitty, Alacritty, WezTerm, Tmux, and Fish all themed via the `extras/` configs, regenerated from the same palette.
+**Terminal ecosystem.** Ghostty, Kitty, Alacritty, WezTerm, Tmux, Fish, Bat, and Delta all use `extras/` configs regenerated from the same palette.
 
 ![ghostty, tmux, fish](static/showcase-ghostty-fish-tmux.png)
 
@@ -262,7 +262,7 @@ It reads the active variant (`vim.g.meowsoot_style`, falling back to `vim.o.back
 
 `gitsigns` · `telescope` · `nvim-cmp` · `blink.cmp` · `lazy.nvim` · `flash.nvim` · `nvim-tree` · `indent-blankline` · `treesitter-context` · `snacks.nvim` · `mini.icons` / `mini.files` / `mini.statusline` / `mini.indentscope` / `mini.diff` / `mini.notify` / `mini.pick` · `noice` · `which-key` · `trouble` · `render-markdown` · `fzf-lua`
 
-## Extras (terminal / multiplexer / shell)
+## Extras
 
 Pre-generated configs live in `extras/`, one file per palette variant. **Night is the canonical default** — it keeps the unsuffixed filename; `moon` and `dawn` add a `-<variant>` suffix.
 
@@ -275,8 +275,31 @@ Pre-generated configs live in `extras/`, one file per palette variant. **Night i
 | Tmux      | `extras/tmux/meowsoot.tmux`      | `extras/tmux/meowsoot-moon.tmux`      | `extras/tmux/meowsoot-dawn.tmux`      |
 | Fish      | `extras/fish/meowsoot.fish`      | `extras/fish/meowsoot-moon.fish`      | `extras/fish/meowsoot-dawn.fish`      |
 | fzf       | `extras/fzf/meowsoot.conf`       | `extras/fzf/meowsoot-moon.conf`       | `extras/fzf/meowsoot-dawn.conf`       |
+| Bat       | `extras/bat/meowsoot.tmTheme`    | `extras/bat/meowsoot-moon.tmTheme`    | `extras/bat/meowsoot-dawn.tmTheme`    |
+| Delta     | `extras/delta/meowsoot.gitconfig` | `extras/delta/meowsoot-moon.gitconfig` | `extras/delta/meowsoot-dawn.gitconfig` |
 
 WezTerm loads schemes by internal name, so the variant files declare `meowsoot-moon` / `meowsoot-dawn` (matching the filename) — set `config.color_scheme` accordingly. Every other tool loads by file path.
+
+### Bat and Delta
+
+Bat and Delta share the generated Bat syntax theme. Install one variant and rebuild Bat's cache:
+
+```sh
+mkdir -p "$(bat --config-dir)/themes"
+cp extras/bat/meowsoot.tmTheme "$(bat --config-dir)/themes/"
+bat cache --build
+```
+
+Select it for Bat with `--theme="meowsoot"` in `$(bat --config-file)`, or set `BAT_THEME=meowsoot`. Delta reads the same compiled cache and accepts the same name through `syntax-theme`.
+
+For matching Delta diff backgrounds, line numbers, and decorations, include the corresponding config from `extras/delta/`:
+
+```gitconfig
+[include]
+    path = /path/to/meowsoot.nvim/extras/delta/meowsoot.gitconfig
+```
+
+The Delta config requires the matching Bat theme to be installed first. See `extras/bat/README.md` and `extras/delta/README.md` for every variant and verification commands.
 
 These are output artifacts — don't edit by hand, they get overwritten on regeneration.
 
@@ -328,5 +351,5 @@ lua/meowsoot/
     semantic_tokens.lua  -- @lsp.*
     kinds.lua         -- LSP kind helper
     plugins/          -- per-plugin overrides
-  extras/             -- ghostty / kitty / alacritty / wezterm / tmux / fish / fzf / palette-md generators
+  extras/             -- generators for terminal, shell, Bat, Delta, and palette docs
 ```

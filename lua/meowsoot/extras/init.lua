@@ -1,5 +1,5 @@
 -- Extras orchestrator. For every style, builds a non-transparent palette, runs
--- each terminal/shell generator, and writes a per-variant file. Night is the
+-- each external-tool generator, and writes a per-variant file. Night is the
 -- canonical default and keeps the unsuffixed filename; moon/dawn get a
 -- `-<style>` filename suffix. Invoked from the justfile via:
 --   nvim --headless -l ... -c 'lua require("meowsoot.extras").setup()'
@@ -8,7 +8,7 @@ local Util = require("meowsoot.util")
 
 local M = {}
 
--- Terminal/shell generators. Each takes a resolved `colors` table and returns a
+-- External-tool generators. Each takes a resolved `colors` table and returns a
 -- single string, so a new variant is just another pass with a different palette
 -- — no per-generator changes. `path` is the night (unsuffixed) filename.
 M.targets = {
@@ -19,6 +19,8 @@ M.targets = {
   { name = "tmux", path = "extras/tmux/meowsoot.tmux" },
   { name = "fish", path = "extras/fish/meowsoot.fish" },
   { name = "fzf", path = "extras/fzf/meowsoot.conf" },
+  { name = "bat", path = "extras/bat/meowsoot.tmTheme" },
+  { name = "delta", path = "extras/delta/meowsoot.gitconfig" },
 }
 
 -- Night stays the canonical default (unsuffixed); moon/dawn get a suffix.
@@ -46,8 +48,8 @@ end
 
 function M.setup()
   for _, style in ipairs(M.styles) do
-    -- Force a non-transparent palette for the snapshot — extras are terminal
-    -- configs that ship a solid background matching each variant.
+    -- Force a non-transparent palette because external themes need a concrete
+    -- background that matches each variant.
     local colors = require("meowsoot.colors").setup({
       style = style,
       transparent = false,
@@ -56,6 +58,7 @@ function M.setup()
     -- WezTerm identifies a scheme by its internal name, not the filename, so it
     -- must track the variant or all three would collide on "meowsoot".
     colors.scheme_name = scheme_name(style)
+    colors.is_light = style == "dawn"
 
     for _, target in ipairs(M.targets) do
       local mod = require("meowsoot.extras." .. target.name)

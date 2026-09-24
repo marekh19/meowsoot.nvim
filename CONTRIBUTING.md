@@ -14,7 +14,7 @@ the justfile:
 just check        # Headless smoke-test: load the colorscheme, fail on errors
 just check-fmt    # Verify all Lua is stylua-clean (CI enforces this)
 just fmt          # Re-format lua/ and colors/ in place
-just extras       # Regenerate extras/ and static/palette.svg from the palette
+just extras       # Regenerate extras/ and static palette documentation
 just cache-clean  # Drop the compiled-highlights cache (rarely needed)
 ```
 
@@ -122,10 +122,10 @@ After any palette change, regenerate the downstream artifacts:
 just extras
 ```
 
-This rewrites `extras/ghostty/meowsoot`, `extras/tmux/meowsoot.tmux`,
-`extras/fish/meowsoot.fish`, `extras/fzf/meowsoot.conf`, and
-`static/palette.svg` from the live palette. Commit those alongside the palette
-edit so a downstream consumer pulling main never sees a partial update.
+This rewrites the generated files under `extras/`, including the Bat syntax
+themes and Delta configs, plus the README palette tables and files under
+`static/swatches/`. Commit those alongside the palette edit so a downstream
+consumer pulling main never sees a partial update.
 
 ## PR expectations
 

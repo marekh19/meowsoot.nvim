@@ -12,7 +12,7 @@ check:
       -c 'echo "ok"' \
       -c 'q'
 
-# Regenerate extras/ from the live palette (ghostty, kitty, alacritty, wezterm, tmux, fish, fzf)
+# Regenerate external-tool themes and palette documentation from the live palette
 extras:
     nvim --headless --noplugin -u NONE \
       --cmd 'set rtp+=.' \

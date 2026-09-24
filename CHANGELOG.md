@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- Generated Bat syntax themes for all three variants. Delta reads the same
+  themes from Bat's compiled cache.
+- Generated Delta configs with matching diff colors and explicit light or dark
+  mode.
+
 ## [0.4.0] — 2026-07-19
 
 ### Added

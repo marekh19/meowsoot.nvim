@@ -155,17 +155,24 @@ dawn.
 ==============================================================================
 EXTRAS                                                      *meowsoot-extras*
 
-Pre-generated configs for adjacent tooling ship in the repo under `extras/`:
+Pre-generated configs for adjacent tooling ship in the repo under `extras/`.
+Night keeps the unsuffixed filename; moon and dawn add their style name.
 
     Tool      File
     -------   ----------------------------------
     Ghostty   extras/ghostty/meowsoot
+    Kitty     extras/kitty/meowsoot.conf
+    Alacritty extras/alacritty/meowsoot.toml
+    WezTerm   extras/wezterm/meowsoot.toml
     Tmux      extras/tmux/meowsoot.tmux
     Fish      extras/fish/meowsoot.fish
     fzf       extras/fzf/meowsoot.conf
+    Bat       extras/bat/meowsoot.tmTheme
+    Delta     extras/delta/meowsoot.gitconfig
 
-They are pinned to the **night** palette so the terminal identity stays
-canonical even if you switch the editor to dawn. Refer to each tool's own
-documentation for how to load a theme file.
+Bat and Delta share the Bat syntax theme. Copy the matching `.tmTheme` into
+`$(bat --config-dir)/themes`, then run `bat cache --build`. Delta reads the
+compiled Bat cache. Its companion gitconfig adds diff backgrounds, line-number
+colors, decorations, and the correct light or dark mode.
 
  vim:tw=78:ts=2:et:ft=help:norl:

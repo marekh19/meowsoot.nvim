@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.5.0] — 2026-09-24
+
 ### Added
 
 - Generated Bat syntax themes for all three variants. Delta reads the same
@@ -109,7 +111,8 @@ Initial public release.
 - README palette swatch (`static/palette.svg`) generated from the live
   palette so it stays in sync.
 
-[Unreleased]: https://github.com/marekh19/meowsoot.nvim/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/marekh19/meowsoot.nvim/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/marekh19/meowsoot.nvim/releases/tag/v0.5.0
 [0.4.0]: https://github.com/marekh19/meowsoot.nvim/releases/tag/v0.4.0
 [0.3.0]: https://github.com/marekh19/meowsoot.nvim/releases/tag/v0.3.0
 [0.2.0]: https://github.com/marekh19/meowsoot.nvim/releases/tag/v0.2.0

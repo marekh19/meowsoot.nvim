@@ -14,7 +14,7 @@ Pure Lua. Zero runtime dependencies. Authored in HSL, AAA contrast on the night 
 - **Six chromatic accents, tuned together.** Anchored at 190° · 208° · 275° · 328° · 20° · 50° — cyan, blue, lavender, pink, peach, yellow. Warm-biased. Three lightness tiers per accent (ANCHOR / STANDARD / QUIET) so the visual hierarchy of the syntax tree comes through without arbitrary highlight noise.
 - **Pure Lua, zero dependencies.** ~50-line HSL → hex engine. No plenary, no required treesitter, no `lush.nvim`. Loads fast, caches compiled highlights, easy to fork.
 - **22 plugin integrations, auto-detected via `lazy.nvim`.** Telescope, fzf-lua, Snacks, Gitsigns, nvim-cmp, blink.cmp, mini.*, noice, which-key, trouble, render-markdown, treesitter-context, flash, lazy.nvim, nvim-tree, indent-blankline. Bundled lualine theme.
-- **Ecosystem in the box.** Matching configs for Ghostty, Kitty, Alacritty, WezTerm, Tmux, Fish, fzf, Bat, and Delta live in `extras/`, regenerated from the same palette. Your editor identity carries through to your shell and command-line tools.
+- **Ecosystem in the box.** Matching configs for Ghostty, Kitty, Alacritty, WezTerm, Tmux, Fish, fzf, Bat, Delta, and Lazygit live in `extras/`, regenerated from the same palette. Your editor identity carries through to your shell and command-line tools.
 
 ## Showcase
 
@@ -277,6 +277,7 @@ Pre-generated configs live in `extras/`, one file per palette variant. **Night i
 | fzf       | `extras/fzf/meowsoot.conf`       | `extras/fzf/meowsoot-moon.conf`       | `extras/fzf/meowsoot-dawn.conf`       |
 | Bat       | `extras/bat/meowsoot.tmTheme`    | `extras/bat/meowsoot-moon.tmTheme`    | `extras/bat/meowsoot-dawn.tmTheme`    |
 | Delta     | `extras/delta/meowsoot.gitconfig` | `extras/delta/meowsoot-moon.gitconfig` | `extras/delta/meowsoot-dawn.gitconfig` |
+| Lazygit   | `extras/lazygit/meowsoot.yml` | `extras/lazygit/meowsoot-moon.yml` | `extras/lazygit/meowsoot-dawn.yml` |
 
 WezTerm loads schemes by internal name, so the variant files declare `meowsoot-moon` / `meowsoot-dawn` (matching the filename) — set `config.color_scheme` accordingly. Every other tool loads by file path.
 
@@ -301,7 +302,17 @@ For matching Delta diff backgrounds, line numbers, and decorations, include the 
 
 The Delta config requires the matching Bat theme to be installed first. See `extras/bat/README.md` and `extras/delta/README.md` for every variant and verification commands.
 
-These are output artifacts — don't edit by hand, they get overwritten on regeneration.
+### Lazygit
+
+Load your existing Lazygit configuration and a theme, with the theme last:
+
+```sh
+lazygit --use-config-file="/path/to/config.yml,/path/to/meowsoot.nvim/extras/lazygit/meowsoot.yml"
+```
+
+Use `lazygit --print-config-dir` to locate your configuration. Choose the same variant as your terminal theme because Lazygit inherits the terminal background. See [the Lazygit setup guide](extras/lazygit/README.md) for every variant, Snacks configuration, and optional Delta integration.
+
+These configs are generated artifacts. Changes made by hand are overwritten on regeneration.
 
 ### Regenerating
 
@@ -351,5 +362,5 @@ lua/meowsoot/
     semantic_tokens.lua  -- @lsp.*
     kinds.lua         -- LSP kind helper
     plugins/          -- per-plugin overrides
-  extras/             -- generators for terminal, shell, Bat, Delta, and palette docs
+  extras/             -- generators for terminal, shell, Bat, Delta, Lazygit, and palette docs
 ```

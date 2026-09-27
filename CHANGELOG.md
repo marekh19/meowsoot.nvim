@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- Generated Lazygit themes for night, moon, and dawn, with setup instructions
+  for standalone use, Snacks, and optional Delta integration.
+
 ## [0.5.0] — 2026-09-24
 
 ### Added

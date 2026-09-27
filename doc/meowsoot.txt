@@ -169,10 +169,19 @@ Night keeps the unsuffixed filename; moon and dawn add their style name.
     fzf       extras/fzf/meowsoot.conf
     Bat       extras/bat/meowsoot.tmTheme
     Delta     extras/delta/meowsoot.gitconfig
+    Lazygit   extras/lazygit/meowsoot.yml
 
 Bat and Delta share the Bat syntax theme. Copy the matching `.tmTheme` into
 `$(bat --config-dir)/themes`, then run `bat cache --build`. Delta reads the
 compiled Bat cache. Its companion gitconfig adds diff backgrounds, line-number
 colors, decorations, and the correct light or dark mode.
+
+Lazygit loads the theme alongside your existing config, with the theme last:
+>sh
+    lazygit --use-config-file="/path/to/config.yml,/path/to/meowsoot.yml"
+<
+Use `lazygit --print-config-dir` to locate your configuration. Match the theme
+to your terminal variant because Lazygit inherits the terminal background.
+See `extras/lazygit/README.md` for Snacks and optional Delta setup.
 
  vim:tw=78:ts=2:et:ft=help:norl:

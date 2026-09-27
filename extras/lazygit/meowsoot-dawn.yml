@@ -1,0 +1,35 @@
+# meowsoot - Lazygit theme.
+# https://github.com/marekh19/meowsoot.nvim
+# Auto-generated from lua/meowsoot/palette.lua. Do not edit by hand.
+# Load after your config:
+#   lazygit --use-config-file="/path/to/config.yml,/path/to/meowsoot-dawn.yml"
+# Use the matching terminal theme for the background.
+
+gui:
+  theme:
+    activeBorderColor:
+      - "#911256"
+      - bold
+    inactiveBorderColor:
+      - "#b0998d"
+    searchingActiveBorderColor:
+      - "#a34414"
+      - bold
+    optionsTextColor:
+      - "#187a8b"
+    selectedLineBgColor:
+      - "#d7cac1"
+    inactiveViewSelectedLineBgColor:
+      - "#f2eee9"
+    cherryPickedCommitBgColor:
+      - "#b5d1d2"
+    cherryPickedCommitFgColor:
+      - "#3c312a"
+    markedBaseCommitBgColor:
+      - "#d5c7a3"
+    markedBaseCommitFgColor:
+      - "#3c312a"
+    unstagedChangesColor:
+      - "#a11717"
+    defaultFgColor:
+      - "#3c312a"

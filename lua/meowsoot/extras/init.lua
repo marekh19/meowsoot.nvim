@@ -21,6 +21,7 @@ M.targets = {
   { name = "fzf", path = "extras/fzf/meowsoot.conf" },
   { name = "bat", path = "extras/bat/meowsoot.tmTheme" },
   { name = "delta", path = "extras/delta/meowsoot.gitconfig" },
+  { name = "lazygit", path = "extras/lazygit/meowsoot.yml" },
 }
 
 -- Night stays the canonical default (unsuffixed); moon/dawn get a suffix.

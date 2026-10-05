@@ -273,7 +273,7 @@ Pre-generated configs live in `extras/`, one file per palette variant. **Night i
 | Alacritty | `extras/alacritty/meowsoot.toml` | `extras/alacritty/meowsoot-moon.toml` | `extras/alacritty/meowsoot-dawn.toml` |
 | WezTerm   | `extras/wezterm/meowsoot.toml`   | `extras/wezterm/meowsoot-moon.toml`   | `extras/wezterm/meowsoot-dawn.toml`   |
 | Tmux      | `extras/tmux/meowsoot.tmux`      | `extras/tmux/meowsoot-moon.tmux`      | `extras/tmux/meowsoot-dawn.tmux`      |
-| Fish      | `extras/fish/meowsoot.fish`      | `extras/fish/meowsoot-moon.fish`      | `extras/fish/meowsoot-dawn.fish`      |
+| Fish      | `extras/fish/meowsoot.theme`     | `extras/fish/meowsoot-moon.theme`     | `extras/fish/meowsoot-dawn.theme`     |
 | fzf       | `extras/fzf/meowsoot.conf`       | `extras/fzf/meowsoot-moon.conf`       | `extras/fzf/meowsoot-dawn.conf`       |
 | Bat       | `extras/bat/meowsoot.tmTheme`    | `extras/bat/meowsoot-moon.tmTheme`    | `extras/bat/meowsoot-dawn.tmTheme`    |
 | Delta     | `extras/delta/meowsoot.gitconfig` | `extras/delta/meowsoot-moon.gitconfig` | `extras/delta/meowsoot-dawn.gitconfig` |
@@ -301,6 +301,26 @@ For matching Delta diff backgrounds, line numbers, and decorations, include the 
 ```
 
 The Delta config requires the matching Bat theme to be installed first. See `extras/bat/README.md` and `extras/delta/README.md` for every variant and verification commands.
+
+### Fish
+
+Fish themes are `.theme` files. Copy every variant into Fish's theme directory, then select one by name:
+
+```sh
+mkdir -p ~/.config/fish/themes
+cp extras/fish/*.theme ~/.config/fish/themes/
+fish_config theme choose meowsoot
+```
+
+`fish_config theme choose` sets global variables, so it lasts only for the current session. To keep the theme, add the same command to `~/.config/fish/config.fish`. To switch every open session at once, use the event handler from the [Fish syntax highlighting docs](https://fishshell.com/docs/current/interactive.html#syntax-highlighting):
+
+```fish
+function apply-my-theme --on-variable=my_theme
+    fish_config theme choose $my_theme
+end
+```
+
+Then run `set -U my_theme meowsoot-dawn` in any session. Each file holds one variant without `[dark]` or `[light]` sections, so Fish applies it whatever mode the terminal reports. Do not pass `--color-theme=dark` or `--color-theme=light`: Fish rejects that flag for themes without sections.
 
 ### Lazygit
 

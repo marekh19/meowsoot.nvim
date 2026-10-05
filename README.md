@@ -312,7 +312,15 @@ cp extras/fish/*.theme ~/.config/fish/themes/
 fish_config theme choose meowsoot
 ```
 
-Run `fish_config theme save meowsoot` to keep the choice in universal variables. To follow the terminal's light or dark mode, call `fish_config theme choose` from a `--on-variable fish_terminal_color_theme` handler, as described in the [Fish syntax highlighting docs](https://fishshell.com/docs/current/interactive.html#syntax-highlighting). Each file holds one variant without `[dark]` or `[light]` sections, so Fish applies it whatever mode the terminal reports. Do not pass `--color-theme=dark` or `--color-theme=light`: Fish rejects that flag for themes without sections.
+`fish_config theme choose` sets global variables, so it lasts only for the current session. To keep the theme, add the same command to `~/.config/fish/config.fish`. To switch every open session at once, use the event handler from the [Fish syntax highlighting docs](https://fishshell.com/docs/current/interactive.html#syntax-highlighting):
+
+```fish
+function apply-my-theme --on-variable=my_theme
+    fish_config theme choose $my_theme
+end
+```
+
+Then run `set -U my_theme meowsoot-dawn` in any session. Each file holds one variant without `[dark]` or `[light]` sections, so Fish applies it whatever mode the terminal reports. Do not pass `--color-theme=dark` or `--color-theme=light`: Fish rejects that flag for themes without sections.
 
 ### Lazygit
 

@@ -178,12 +178,13 @@ colors, decorations, and the correct light or dark mode.
 
 Fish selects themes by name from `~/.config/fish/themes`:
 >sh
+    mkdir -p ~/.config/fish/themes
     cp extras/fish/*.theme ~/.config/fish/themes/
     fish_config theme choose meowsoot
 <
-Run `fish_config theme save meowsoot` to keep the choice. Each file holds one
-variant without `[dark]` or `[light]` sections, so Fish applies it in any
-terminal mode.
+The choice lasts for the current session. Add the `choose` command to
+`~/.config/fish/config.fish` to keep it. Each file holds one variant without
+`[dark]` or `[light]` sections, so Fish applies it in any terminal mode.
 
 Lazygit loads the theme alongside your existing config, with the theme last:
 >sh

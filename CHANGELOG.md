@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+
+- **Breaking:** the Fish extra is now a set of Fish `.theme` files
+  (`extras/fish/meowsoot{,-moon,-dawn}.theme`) instead of `.fish` scripts. Copy
+  them into `~/.config/fish/themes/` and run
+  `fish_config theme choose meowsoot`. Remove any old `meowsoot*.fish` file from
+  `~/.config/fish/conf.d/`, because it sets the same variables on every
+  shell start and conflicts with the chosen theme. Colors are unchanged.
+
 ## [0.6.0] - 2026-09-27
 
 ### Added

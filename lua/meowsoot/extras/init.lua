@@ -17,7 +17,7 @@ M.targets = {
   { name = "alacritty", path = "extras/alacritty/meowsoot.toml" },
   { name = "wezterm", path = "extras/wezterm/meowsoot.toml" },
   { name = "tmux", path = "extras/tmux/meowsoot.tmux" },
-  { name = "fish", path = "extras/fish/meowsoot.fish" },
+  { name = "fish", path = "extras/fish/meowsoot.theme" },
   { name = "fzf", path = "extras/fzf/meowsoot.conf" },
   { name = "bat", path = "extras/bat/meowsoot.tmTheme" },
   { name = "delta", path = "extras/delta/meowsoot.gitconfig" },

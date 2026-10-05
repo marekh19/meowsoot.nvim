@@ -165,7 +165,7 @@ Night keeps the unsuffixed filename; moon and dawn add their style name.
     Alacritty extras/alacritty/meowsoot.toml
     WezTerm   extras/wezterm/meowsoot.toml
     Tmux      extras/tmux/meowsoot.tmux
-    Fish      extras/fish/meowsoot.fish
+    Fish      extras/fish/meowsoot.theme
     fzf       extras/fzf/meowsoot.conf
     Bat       extras/bat/meowsoot.tmTheme
     Delta     extras/delta/meowsoot.gitconfig
@@ -175,6 +175,15 @@ Bat and Delta share the Bat syntax theme. Copy the matching `.tmTheme` into
 `$(bat --config-dir)/themes`, then run `bat cache --build`. Delta reads the
 compiled Bat cache. Its companion gitconfig adds diff backgrounds, line-number
 colors, decorations, and the correct light or dark mode.
+
+Fish selects themes by name from `~/.config/fish/themes`:
+>sh
+    cp extras/fish/*.theme ~/.config/fish/themes/
+    fish_config theme choose meowsoot
+<
+Run `fish_config theme save meowsoot` to keep the choice. Each file holds one
+variant without `[dark]` or `[light]` sections, so Fish applies it in any
+terminal mode.
 
 Lazygit loads the theme alongside your existing config, with the theme last:
 >sh

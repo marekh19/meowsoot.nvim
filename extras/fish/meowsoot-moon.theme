@@ -1,0 +1,39 @@
+# name: 'meowsoot-moon'
+# url: 'https://github.com/marekh19/meowsoot.nvim'
+# meowsoot - Fish shell theme.
+# Auto-generated from lua/meowsoot/palette.lua. Do not edit by hand.
+# Install:  cp extras/fish/meowsoot-moon.theme ~/.config/fish/themes/
+# Select:   fish_config theme choose meowsoot-moon
+
+# Syntax Highlighting Colors
+fish_color_normal d9dbe8
+fish_color_command 96d8e3
+fish_color_keyword cca6e7
+fish_color_quote dfd286
+fish_color_redirection 96d8e3
+fish_color_end d9dbe8
+fish_color_error e99696
+fish_color_param d9dbe8
+fish_color_option e3b096
+fish_color_comment a0a5ba
+fish_color_selection --background=353746
+fish_color_operator 96d8e3
+fish_color_escape e3b096
+fish_color_autosuggestion a0a5ba
+fish_color_cwd 96d8e3
+fish_color_cwd_root e99696
+fish_color_valid_path --underline
+fish_color_history_current --bold
+fish_color_search_match --background=353746
+fish_color_match c4e7ee
+fish_color_cancel e99696
+
+# Completion Pager Colors
+fish_pager_color_progress a0a5ba
+fish_pager_color_prefix 96d8e3
+fish_pager_color_completion d9dbe8
+fish_pager_color_description a0a5ba
+fish_pager_color_selected_background --background=353746
+fish_pager_color_selected_completion d9dbe8
+fish_pager_color_selected_description a0a5ba
+fish_pager_color_selected_prefix 96d8e3

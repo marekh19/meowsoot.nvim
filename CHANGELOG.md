@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- Generated Obsidian CSS snippets for night, moon, and dawn. They require the
+  Minimal theme and replace its Default color scheme. Setup instructions are in
+  `extras/obsidian/README.md`.
+
 ## [0.7.0] - 2026-10-05
 
 ### Changed

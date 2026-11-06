@@ -1,0 +1,81 @@
+/*
+meowsoot-moon - Obsidian CSS snippet for the Minimal theme.
+https://github.com/marekh19/meowsoot.nvim
+Auto-generated from lua/meowsoot/palette.lua. Do not edit by hand.
+Replaces Minimal's Default dark color scheme. Setup: extras/obsidian/README.md
+*/
+
+.theme-dark,
+.theme-dark.minimal-default-dark {
+  --color-red-rgb: 233,150,150;
+  --color-orange-rgb: 227,176,150;
+  --color-yellow-rgb: 223,210,134;
+  --color-green-rgb: 152,205,170;
+  --color-cyan-rgb: 150,216,227;
+  --color-blue-rgb: 150,189,223;
+  --color-purple-rgb: 204,166,231;
+  --color-pink-rgb: 234,164,201;
+
+  --color-red: #e99696;
+  --color-orange: #e3b096;
+  --color-yellow: #dfd286;
+  --color-green: #98cdaa;
+  --color-cyan: #96d8e3;
+  --color-blue: #96bddf;
+  --color-purple: #cca6e7;
+  --color-pink: #eaa4c9;
+
+  --base-h: 228;
+  --base-s: 18%;
+  --base-l: 11%;
+
+  --accent-h: 328;
+  --accent-s: 62%;
+  --accent-l: 78%;
+
+  --bg1: #171921;
+  --bg2: #101218;
+  --bg3: rgba(217,219,232,0.09);
+
+  --ui1: #353746;
+  --ui2: #404454;
+  --ui3: #797e96;
+
+  --tx1: #d9dbe8;
+  --tx2: #a0a5ba;
+  --tx3: #797e96;
+  --tx4: #a0a5ba;
+
+  --hl1: rgba(217,219,232,0.17);
+  --hl2: rgba(223,210,134,0.35);
+  --sp1: #171921;
+
+  --caret-color: #eaa4c9;
+  --link-color: #96d8e3;
+  --link-color-hover: #c4e7ee;
+  --link-external-color: #96d8e3;
+  --link-external-color-hover: #c4e7ee;
+  --list-marker-color: #96d8e3;
+
+  /* Obsidian's defaults make strings green; meowsoot keeps green out of code. */
+  --code-comment: #797e9a;
+  --code-function: #eaa4c9;
+  --code-important: #e3b096;
+  --code-keyword: #96d8e3;
+  --code-operator: #797e96;
+  --code-property: #d9dbe8;
+  --code-punctuation: #797e96;
+  --code-string: #dfd286;
+  --code-tag: #96d8e3;
+  --code-value: #e3b096;
+}
+
+/* Minimal's colorful headings use green for h4; this uses the meowsoot rainbow. */
+.theme-dark.colorful-headings {
+  --h1-color: #eaa4c9;
+  --h2-color: #e3b096;
+  --h3-color: #dfd286;
+  --h4-color: #96d8e3;
+  --h5-color: #96bddf;
+  --h6-color: #cca6e7;
+}

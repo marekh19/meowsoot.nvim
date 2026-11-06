@@ -1,0 +1,81 @@
+/*
+meowsoot-dawn - Obsidian CSS snippet for the Minimal theme.
+https://github.com/marekh19/meowsoot.nvim
+Auto-generated from lua/meowsoot/palette.lua. Do not edit by hand.
+Replaces Minimal's Default light color scheme. Setup: extras/obsidian/README.md
+*/
+
+.theme-light,
+.theme-light.minimal-default-light {
+  --color-red-rgb: 161,23,23;
+  --color-orange-rgb: 163,68,20;
+  --color-yellow-rgb: 145,113,18;
+  --color-green-rgb: 31,122,61;
+  --color-cyan-rgb: 24,122,139;
+  --color-blue-rgb: 37,101,157;
+  --color-purple-rgb: 106,44,150;
+  --color-pink-rgb: 145,18,86;
+
+  --color-red: #a11717;
+  --color-orange: #a34414;
+  --color-yellow: #917112;
+  --color-green: #1f7a3d;
+  --color-cyan: #187a8b;
+  --color-blue: #25659d;
+  --color-purple: #6a2c96;
+  --color-pink: #911256;
+
+  --base-h: 38;
+  --base-s: 40%;
+  --base-l: 96%;
+
+  --accent-h: 328;
+  --accent-s: 78%;
+  --accent-l: 32%;
+
+  --bg1: #f9f6f1;
+  --bg2: #e8e3de;
+  --bg3: rgba(60,49,42,0.04);
+
+  --ui1: #d7cac1;
+  --ui2: #b0998d;
+  --ui3: #9c948b;
+
+  --tx1: #3c312a;
+  --tx2: #7e7063;
+  --tx3: #9c948b;
+  --tx4: #7e7063;
+
+  --hl1: rgba(60,49,42,0.22);
+  --hl2: rgba(145,113,18,0.35);
+  --sp1: #f9f6f1;
+
+  --caret-color: #911256;
+  --link-color: #187a8b;
+  --link-color-hover: #116374;
+  --link-external-color: #187a8b;
+  --link-external-color-hover: #116374;
+  --list-marker-color: #187a8b;
+
+  /* Obsidian's defaults make strings green; meowsoot keeps green out of code. */
+  --code-comment: #897a6c;
+  --code-function: #911256;
+  --code-important: #a34414;
+  --code-keyword: #187a8b;
+  --code-operator: #9c948b;
+  --code-property: #3c312a;
+  --code-punctuation: #9c948b;
+  --code-string: #917112;
+  --code-tag: #187a8b;
+  --code-value: #a34414;
+}
+
+/* Minimal's colorful headings use green for h4; this uses the meowsoot rainbow. */
+.theme-light.colorful-headings {
+  --h1-color: #911256;
+  --h2-color: #a34414;
+  --h3-color: #917112;
+  --h4-color: #187a8b;
+  --h5-color: #25659d;
+  --h6-color: #6a2c96;
+}

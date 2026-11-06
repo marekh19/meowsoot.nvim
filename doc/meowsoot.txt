@@ -170,6 +170,7 @@ Night keeps the unsuffixed filename; moon and dawn add their style name.
     Bat       extras/bat/meowsoot.tmTheme
     Delta     extras/delta/meowsoot.gitconfig
     Lazygit   extras/lazygit/meowsoot.yml
+    Obsidian  extras/obsidian/meowsoot.css
 
 Bat and Delta share the Bat syntax theme. Copy the matching `.tmTheme` into
 `$(bat --config-dir)/themes`, then run `bat cache --build`. Delta reads the
@@ -193,5 +194,10 @@ Lazygit loads the theme alongside your existing config, with the theme last:
 Use `lazygit --print-config-dir` to locate your configuration. Match the theme
 to your terminal variant because Lazygit inherits the terminal background.
 See `extras/lazygit/README.md` for Snacks and optional Delta setup.
+
+Obsidian snippets require the Minimal theme and replace its Default color
+scheme. Copy them into `<vault>/.obsidian/snippets/` and turn them on in
+Settings > Appearance > CSS snippets. Turn on one dark snippet only (night or
+moon); dawn changes only light mode. See `extras/obsidian/README.md`.
 
  vim:tw=78:ts=2:et:ft=help:norl:

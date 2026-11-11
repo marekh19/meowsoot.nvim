@@ -164,6 +164,7 @@ Night keeps the unsuffixed filename; moon and dawn add their style name.
     Kitty     extras/kitty/meowsoot.conf
     Alacritty extras/alacritty/meowsoot.toml
     WezTerm   extras/wezterm/meowsoot.toml
+    Herdr app extras/herdr-app/meowsoot.json
     Tmux      extras/tmux/meowsoot.tmux
     Fish      extras/fish/meowsoot.theme
     fzf       extras/fzf/meowsoot.conf
@@ -176,6 +177,10 @@ Bat and Delta share the Bat syntax theme. Copy the matching `.tmTheme` into
 `$(bat --config-dir)/themes`, then run `bat cache --build`. Delta reads the
 compiled Bat cache. Its companion gitconfig adds diff backgrounds, line-number
 colors, decorations, and the correct light or dark mode.
+
+The Herdr desktop app does not read Ghostty themes. Copy the JSON themes into
+`~/.config/herdr-app/themes/` and choose one in Herdr's Settings. Herdr
+derives its panel colors from the terminal colors and the pink accent.
 
 Fish selects themes by name from `~/.config/fish/themes`:
 >sh

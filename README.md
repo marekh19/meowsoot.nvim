@@ -14,7 +14,7 @@ Pure Lua. Zero runtime dependencies. Authored in HSL, AAA contrast on the night 
 - **Six chromatic accents, tuned together.** Anchored at 190° · 208° · 275° · 328° · 20° · 50° — cyan, blue, lavender, pink, peach, yellow. Warm-biased. Three lightness tiers per accent (ANCHOR / STANDARD / QUIET) so the visual hierarchy of the syntax tree comes through without arbitrary highlight noise.
 - **Pure Lua, zero dependencies.** ~50-line HSL → hex engine. No plenary, no required treesitter, no `lush.nvim`. Loads fast, caches compiled highlights, easy to fork.
 - **22 plugin integrations, auto-detected via `lazy.nvim`.** Telescope, fzf-lua, Snacks, Gitsigns, nvim-cmp, blink.cmp, mini.*, noice, which-key, trouble, render-markdown, treesitter-context, flash, lazy.nvim, nvim-tree, indent-blankline. Bundled lualine theme.
-- **Ecosystem in the box.** Matching configs for Ghostty, Kitty, Alacritty, WezTerm, Tmux, Fish, fzf, Bat, Delta, Lazygit, and Obsidian live in `extras/`, regenerated from the same palette. Your editor identity carries through to your shell, command-line tools, and notes.
+- **Ecosystem in the box.** Matching configs for Ghostty, Kitty, Alacritty, WezTerm, the Herdr app, Tmux, Fish, fzf, Bat, Delta, Lazygit, and Obsidian live in `extras/`, regenerated from the same palette. Your editor identity carries through to your shell, command-line tools, and notes.
 
 ## Showcase
 
@@ -272,6 +272,7 @@ Pre-generated configs live in `extras/`, one file per palette variant. **Night i
 | Kitty     | `extras/kitty/meowsoot.conf`     | `extras/kitty/meowsoot-moon.conf`     | `extras/kitty/meowsoot-dawn.conf`     |
 | Alacritty | `extras/alacritty/meowsoot.toml` | `extras/alacritty/meowsoot-moon.toml` | `extras/alacritty/meowsoot-dawn.toml` |
 | WezTerm   | `extras/wezterm/meowsoot.toml`   | `extras/wezterm/meowsoot-moon.toml`   | `extras/wezterm/meowsoot-dawn.toml`   |
+| Herdr app | `extras/herdr-app/meowsoot.json` | `extras/herdr-app/meowsoot-moon.json` | `extras/herdr-app/meowsoot-dawn.json` |
 | Tmux      | `extras/tmux/meowsoot.tmux`      | `extras/tmux/meowsoot-moon.tmux`      | `extras/tmux/meowsoot-dawn.tmux`      |
 | Fish      | `extras/fish/meowsoot.theme`     | `extras/fish/meowsoot-moon.theme`     | `extras/fish/meowsoot-dawn.theme`     |
 | fzf       | `extras/fzf/meowsoot.conf`       | `extras/fzf/meowsoot-moon.conf`       | `extras/fzf/meowsoot-dawn.conf`       |
@@ -302,6 +303,17 @@ For matching Delta diff backgrounds, line numbers, and decorations, include the 
 ```
 
 The Delta config requires the matching Bat theme to be installed first. See `extras/bat/README.md` and `extras/delta/README.md` for every variant and verification commands.
+
+### Herdr app
+
+The [Herdr](https://herdr.dev) desktop app draws its terminals with Ghostty's engine but does not read Ghostty themes. Copy the JSON themes into its themes folder:
+
+```sh
+mkdir -p ~/.config/herdr-app/themes
+cp extras/herdr-app/*.json ~/.config/herdr-app/themes/
+```
+
+Then choose `meowsoot`, `meowsoot-moon`, or `meowsoot-dawn` in Herdr's Settings. The files set the terminal colors and a pink accent. Herdr derives its other panel colors from them. The `herdr` terminal app needs no theme: it uses the colors of the terminal it runs in.
 
 ### Fish
 

@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- Generated themes for the Herdr desktop app for night, moon, and dawn
+  (`extras/herdr-app/*.json`). Copy them into `~/.config/herdr-app/themes/`
+  and choose one in Herdr's Settings.
+
 ## [0.8.0] - 2026-11-06
 
 ### Added

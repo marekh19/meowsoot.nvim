@@ -16,6 +16,7 @@ M.targets = {
   { name = "kitty", path = "extras/kitty/meowsoot.conf" },
   { name = "alacritty", path = "extras/alacritty/meowsoot.toml" },
   { name = "wezterm", path = "extras/wezterm/meowsoot.toml" },
+  { name = "herdr_app", path = "extras/herdr-app/meowsoot.json" },
   { name = "tmux", path = "extras/tmux/meowsoot.tmux" },
   { name = "fish", path = "extras/fish/meowsoot.theme" },
   { name = "fzf", path = "extras/fzf/meowsoot.conf" },
